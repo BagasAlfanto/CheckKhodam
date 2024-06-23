@@ -27,7 +27,19 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
             "Icikiwir.",
             "Pegunungan Himalaya",
             "Bebek Kanjut.",
-            "Laba-laba Sunda."
+            "Laba-laba Sunda.",
+            "Beruang Tipes",
+            "Naga Hitam",
+            "Pelek Tronton",
+            "Teh Celup",
+            "Gojo Skibidi",
+            "Tuyul Mullet",
+            "cupang Rembo",
+            "Kenalpot Resing",
+            "Rusdi Sigma",
+            "Mas Faiz 😋",
+            "Reza Kecap",
+            "Vario Mber"
         ];
 
  
