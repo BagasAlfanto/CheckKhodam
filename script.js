@@ -1,5 +1,5 @@
 const data = [
-    "Beruang Tipes","Naga Hytam","Pelek Tronton","Teh Celup","Gojo Skibidi","Tuyul Mullet","Cupang Rembo","Kenalpot Resing","Rusdi Sigma","Mas Faiz 😋","Reza Kecap","Bekantan","Kambir Jawir","Paus Biru Mandalika","Joker Merah","Pelek Vario","Cicak Manado","Ilham Batagor","Musang Birahi","Paus Sumatra","Farhan Kebab","Gendang Jawa","Orang Hytam","Harimau Jawa"
+    "Beruang Tipes","Naga Hytam","Pelek Tronton","Teh Celup","Gojo Skibidi","Tuyul Mullet","Cupang Rembo","Kenalpot Resing","Rusdi Sigma","Mas Faiz 😋","Kamitetep","Reza Kecap","Bekantan","Kambir Jawir","Paus Biru Mandalika","Joker Merah","Pelek Vario","Cicak Manado","Ilham Batagor","Musang Birahi","Paus Sumatra","Farhan Kebab","Gendang Jawa","Orang Hytam","Harimau Jawa"
 ];
 
 function getRandomData() {
