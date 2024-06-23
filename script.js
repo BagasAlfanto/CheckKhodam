@@ -39,7 +39,8 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
             "Rusdi Sigma",
             "Mas Faiz 😋",
             "Reza Kecap",
-            "Vario Mber"
+            "Vario Mber",
+            "Kamitetep"
         ];
 
  
