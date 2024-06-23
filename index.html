@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title di Atas</title>
+    <title>Cek Khodam Kalian</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Lihat Khodam Anda</h1>
-        <form id="myForm" action="#">
-            <input type="text" id="textInput" placeholder="Masukkan nama anda di sini" required>
-            <button type="submit">Cek Khodam</button>
-        </form>
-        <div id="loading" class="loading"></div>
-        <div id="result" class="result"></div>
-        <p id="outputText" class="output-text"></p> <!-- Teks yang akan ditambahkan -->
-        <button id="refreshBtn" class="refresh-btn" onclick="refreshForm()">Cek Ulang</button> <!-- Tombol Refresh -->
+    <div class="navbar">
+        <a href="#">Cek Khodam By Bagas</a>
+      </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Form -->
+        <div class="form-container">
+            <h2>Cek Khodam Anda</h2>
+            <form id="randomForm">
+                <input type="text" id="inputField" placeholder="Masukan Nama Anda" required>
+                <button type="submit">Cek Khodam</button>
+            </form>
+            <div id="loading" class="loading" style="display:none;">
+            </div>
+            <div id="message" class="message" style="display:none;">Khodam anda adalah :</div>
+            <div id="result" class="result"></div>
+            <div id="refreshSection" class="refresh-section" style="display:none;">
+                <p>Share ke teman dan saudara kamu supaya mereka tau khodam mereka</p>
+                <button id="refreshButton">Cek Lagi</button>
+            </div>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Suport programer ini untuk mengembangkan skill-nya <a href="https://saweria.co/BagasAlfanto" style="color: aqua;">Click Here</a></p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

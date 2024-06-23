@@ -1,82 +1,43 @@
-document.getElementById("myForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+const data = [
+    "Beruang Tipes","Naga Hytam","Pelek Tronton","Teh Celup","Gojo Skibidi","Tuyul Mullet","Cupang Rembo","Kenalpot Resing","Rusdi Sigma","Mas Faiz 😋","Reza Kecap","Bekantan","Kambir Jawir","Paus Biru Mandalika","Joker Merah","Pelek Vario","Cicak Manado","Ilham Batagor","Musang Birahi","Paus Sumatra","Farhan Kebab","Gendang Jawa","Orang Hytam","Harimau Jawa"
+];
 
-   
-    var form = document.getElementById("myForm");
-    var loading = document.getElementById("loading");
-    form.style.opacity = "0"; 
-    loading.style.display = "block"; 
+function getRandomData() {
+    const randomIndex = Math.floor(Math.random() * data.length);
+    return data[randomIndex];
+}
 
+document.getElementById("randomForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    var inputValue = document.getElementById("textInput").value.trim();
+    const formElement = document.querySelector(".form-container form");
+    formElement.style.display = "none";
 
+    const loadingElement = document.getElementById("loading");
+    loadingElement.style.display = "block";
+
+    const resultElement = document.getElementById("result");
+    resultElement.style.display = "none";
+
+    const messageElement = document.getElementById("message");
+    messageElement.style.display = "none";
+
+    const refreshSection = document.getElementById("refreshSection");
+    refreshSection.style.display = "none";
 
     setTimeout(function() {
+        loadingElement.style.display = "none";
 
-        var outputText = document.getElementById("outputText");
-        outputText.textContent = "Ini adalah teks tambahan yang muncul bersamaan dengan output.";
-        outputText.style.display = "block"; 
+        messageElement.style.display = "block";
 
-  
-        loading.style.display = "none";
+        const randomData = getRandomData();
+        resultElement.textContent = randomData;
+        resultElement.style.display = "block";
 
- 
-        var options = [
-            "Harimau Sigma",
-            "Bebek Kanjut.",
-            "Icikiwir.",
-            "Pegunungan Himalaya",
-            "Bebek Kanjut.",
-            "Laba-laba Sunda.",
-            "Beruang Tipes",
-            "Naga Hitam",
-            "Pelek Tronton",
-            "Teh Celup",
-            "Gojo Skibidi",
-            "Tuyul Mullet",
-            "cupang Rembo",
-            "Kenalpot Resing",
-            "Rusdi Sigma",
-            "Mas Faiz 😋",
-            "Reza Kecap",
-            "Vario Mber",
-            "Kamitetep"
-        ];
-
- 
-        var randomIndex = Math.floor(Math.random() * options.length);
-        var chosenOption = options[randomIndex];
-
-
-        var resultDiv = document.getElementById("result");
-        resultDiv.textContent = chosenOption;
-        resultDiv.style.display = "block";
-
- 
-        var refreshBtn = document.getElementById("refreshBtn");
-        refreshBtn.style.display = "inline-block";
-
-
-        form.style.display = "none"; 
-        resultDiv.style.marginTop = "50px"; 
-        outputText.style.marginTop = "20px"; 
-
-    }, 1500); 
+        refreshSection.style.display = "block";
+    }, 2000); 
 });
 
-
-function refreshForm() {
-    var form = document.getElementById("myForm");
-    var resultDiv = document.getElementById("result");
-    var outputText = document.getElementById("outputText");
-    var refreshBtn = document.getElementById("refreshBtn");
-
-    
-    form.style.opacity = "1"; 
-    resultDiv.style.display = "none"; 
-    outputText.style.display = "none"; 
-    refreshBtn.style.display = "none"; 
-
-    document.getElementById("textInput").value = "";
-    form.style.display = "flex";
-}
+document.getElementById("refreshButton").addEventListener("click", function() {
+    location.reload();
+});
